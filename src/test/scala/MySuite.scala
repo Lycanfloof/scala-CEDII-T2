@@ -19,4 +19,21 @@ class MySuite extends munit.FunSuite {
   test("sumMultiplesOfFive:") {
     assertEquals(sumMultiplesOfFive(List[Int](4, 1, 5, 20, 3, 7, 8, 10)), 35)
   }
+
+  test("tailCheckInList:") {
+    assertEquals(tailCheckInList(List[String]("Hello", "World!"), "World!"), true)
+    assertEquals(tailCheckInList(List[String]("Hello", "World!"), ":)"), false)
+  }
+
+  test("tailReplaceInList:") {
+    assertEquals(tailReplaceInList(List[Int](0, 1, 0, 1, 0, 1, 1, 1, 0, 1), 0, 5), List[Int](5, 1, 5, 1, 5, 1, 1, 1, 5, 1))
+  }
+
+  test("tailReturnOddFromList:") {
+    assertEquals(tailReturnOddFromList(List[Int](2, 1, 3, 4, 5, 5, 6, 1)), List[Int](1, 3, 5, 5, 1))
+  }
+
+  test("tailSumMultiplesOfFive:") {
+    assertEquals(tailSumMultiplesOfFive(List[Int](4, 1, 5, 20, 3, 7, 8, 10)), 35)
+  }
 }
